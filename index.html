@@ -10,54 +10,59 @@
 </head>
 
 <body>
-    <div id="div1">
-        <h1>Kalorien Rechner</h1>
-        <label for="height">Körpergröße</label>
-        <input type="number" id="height"></br>
-        <label for="age">Alter</label>
-        <input type="number" id="age"></br>
-        <label for="weight">Gewicht</label>
-        <input type="number" id="weight"></br>
-        <label for="bodytype">Körperbau</label>
-        <input type="radio" name="bodytype" id="men"></br>
-        <label for="men">Männlich</label>
-        <input type="radio" name="bodytype" id="women"></br>
-        <label for="women">Weiblich</label>
-    </div>
-    <label for="actv">Arbeits- und Freizeitaktivität</label>
-    <select name="activ" id="activity">
-        <option value="1">Schlafen</option>
-        <option value="2">Nur Sitzen oder Liegen</option>
-        <option value="3">Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der
-            Freizeit, z.B. Büroarbeit
-        </option>
-        <option value="4">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende,
-            Fließbandarbeiter, Laboranten, Kraftfahrer</option>
-        <option value="5">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker, Mechaniker,
-            Hausfrauen
-        </option>
-        <option value="6">Körperlich anstrengende berufliche Arbeit
-        </option>
-    </select>
-    <button type="button" onclick="calculate(event)">Submit</button>
-    <div>
-        <h2>Grundumsatz</h2>
-        <p>kcal</p>
-        <p id="outputGrundKcal"></p>
-        <p>kj</p>
-        <p id="outputGrundKj"></p>
-    </div>
-    <div>
-        <h2>Gesamtumsatz</h2>
-        <p>kcal</p>
-        <p id="outputGesKcal"></p>
-        <p>kj</p>
-        <p id="outputGesKj"></p>
-    </div>
-    <footer>
-        <h3>Das Ergebnis des Rechners sollten Sie als Orienteirerungswert ansehe, da es verschiedene
-            Fehelermöglichkeiten gibt, wie abweichender Grundumsatz, falsche zeitenanschätzung ect.</h3>
-    </footer>
+    <section class="background">
+        <form id="div1">
+            <h1>Kalorien Rechner</h1>
+            <label for="height">Körpergröße (in cm)</label>
+            <input type="number" id="height"></br>
+            <label for="age">Alter (in Jahren)</label>
+            <input type="number" id="age"></br>
+            <label for="weight">Gewicht (in Kg)</label>
+            <input type="number" id="weight"></br>
+            <label for="bodytype">Geschlecht</label>
+
+            <div id="labelgender">
+                <input type="radio" name="bodytype" id="men">Männlich<br>
+                <input type="radio" name="bodytype" id="women">Weiblich
+            </div>
+            <label for="actv">Arbeits- und Freizeitaktivität</label>
+            <select name="activ" id="activity">
+                <option value="1">Schlafen</option>
+                <option value="2">Nur Sitzen oder Liegen</option>
+                <option value="3">Ausschließlich sitzende Tätigkeit mit wenig oder keiner körperlichen Aktivität in der
+                    Freizeit, z.B. Büroarbeit
+                </option>
+                <option value="4">Sitzende Tätigkeit mit zeitweilig gehender oder stehender Tätigkeit, z.B. Studierende,
+                    Fließbandarbeiter, Laboranten, Kraftfahrer</option>
+                <option value="5">Überwiegend gehende oder stehende Tätigkeit, z.B. Verkäufer, Kellner, Handwerker,
+                    Mechaniker,
+                    Hausfrauen
+                </option>
+                <option value="6">Körperlich anstrengende berufliche Arbeit
+                </option>
+            </select>
+
+            <button type="button" onclick="calculate(event)">Abschicken</button>
+        </form>
+        <section id="tabelle">
+
+            <h2 class="grund">Grundumsatz</h2>
+            <p id="outputGrundKcal">?</p>
+            <p class="kj">kj</p>
+            <p id="outputGrundKj">?</p>
+
+
+            <h2 class="ges">Gesamtumsatz</h2>
+            <p class="kcal">kcal</p>
+            <p id="outputGesKcal"></p>
+            <p id="outputGesKj"></p>
+
+        </section>
+        <footer>
+            <h3>Das Ergebnis des Rechners sollten Sie als Orienteirerungswert ansehe, da es verschiedene
+                Fehelermöglichkeiten gibt, wie abweichender Grundumsatz, falsche zeitenanschätzung ect.</h3>
+        </footer>
+    </section>
     <script src="./assets/js/main.js">
     </script>
 </body>

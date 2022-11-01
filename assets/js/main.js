@@ -14,14 +14,9 @@ const calculate = (event) => {
 
     let outputGesKj = document.getElementById("outputGeskj");
     let outputGesKcal = document.getElementById("outputGesKcal");
-
-
-
     if (!(men || women)) {
         return;
     }
-
-
     switch (activity) {
         case 1: pal = 0.95;
             break;
@@ -36,7 +31,6 @@ const calculate = (event) => {
         case 6: pal = 2.2;
             break;
     };
-
     if (men) {
         outputGrundKcal = 664.7 + (13.7 * weight) + (5 * height) - (6.8 * age);
         outputGrundKj = outputGrundKcal * 4.1868;
@@ -56,11 +50,5 @@ const calculate = (event) => {
         document.getElementById("outputGrundKj").innerHTML = outputGrundKj.toFixed(2);
         document.getElementById("outputGesKcal").innerHTML = outputGesKcal.toFixed(2);
         document.getElementById("outputGesKj").innerHTML = outputGesKj.toFixed(2);
-
     };
-
-
-
-
-
 };
