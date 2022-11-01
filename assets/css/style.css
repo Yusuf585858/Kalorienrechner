@@ -25,14 +25,18 @@ h1 {
     gap: 5px;
 }
 
-/* #labelgender {
+div.gender {
+
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: left;
+    margin: 0 auto;
+    gap: 25px;
+    margin: 5px 0;
 
-    color: red;
-} */
 
-input {
+}
+
+.background .div1>input {
     width: 200px;
 
 }
